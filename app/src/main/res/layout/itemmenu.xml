@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:layout_margin="5dp"
+    >
+
+<ImageView
+android:layout_width="15dp"
+android:layout_height="15dp"
+android:id="@+id/img_itemMenu"
+android:src="@drawable/menu_2976215"></ImageView>
+<TextView
+android:id="@+id/tvItem"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Tên item"
+android:textSize="15dp"
+android:textColor="#000"
+android:paddingLeft="10dp"></TextView>
+    </LinearLayout>

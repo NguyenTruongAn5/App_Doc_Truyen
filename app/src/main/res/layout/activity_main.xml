@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:background="#12A4E6">
+                <TextView
+                    android:layout_width="330dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/userName"
+                    android:text="Chưa đăng nhập"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    ></TextView>
+                <ImageView
+                    android:paddingTop="5dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/user"
+                    >
+                </ImageView>
+            </LinearLayout>
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toobar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#2196F3">
+
+                <EditText
+                    android:id="@+id/editTimKiem"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/white"
+                    android:hint="Tìm truyện..."
+                    android:textSize="10dp"
+                    android:textStyle="bold"></EditText>
+
+            </androidx.appcompat.widget.Toolbar>
+            <GridView
+                android:id="@+id/dgvListTruyen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:numColumns="3"></GridView>
+        </LinearLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            android:id="@+id/navigation"
+            >
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/listviewMenu"
+                android:layout_marginTop="40dp">
+
+            </ListView>
+        </com.google.android.material.navigation.NavigationView>
+    </androidx.drawerlayout.widget.DrawerLayout>
+</LinearLayout>
